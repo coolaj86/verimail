@@ -1,0 +1,23 @@
+{
+  "name": "verimail",
+  "version": "0.7.0",
+  "description": "A wireframe for e-mail address verification.",
+  "author": "AJ ONeal <coolaj86@gmail.com> (http://coolaj86.info)",
+  "main": "lib/verimail.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coolaj86/verimail.git"
+  },
+  "keywords": [
+    "email",
+    "e-mail",
+    "verification"
+  ],
+  "license": "Apache v2"
+}
