@@ -5,10 +5,13 @@ html
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
     script(src="app.js")
   body
+    h1.
+      Advanced Branded
     .js-verimail-container
       p.
         Enter your email address below and you will be sent a message with a link to verify it.
       form.js-verimail-query
+        input(type="text", name="name", placeholder="ex: John Doe", required="required")
         input(type="email", name="email", placeholder="ex: john.doe@example.com", required="required")
         input(type="submit")
     .js-post-verimail

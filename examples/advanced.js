@@ -2,7 +2,10 @@
 (function () {
   "use strict";
 
+  require('remedial');
+
   var Verimail = require('../lib/verimail')
+    , path = require('path')
     , connect = require('connect')
     , mailer = require('./config').mailer
     , verimail
@@ -44,15 +47,14 @@
                 + "I saw that you just joined our site and I wanted to say 'hi' and 'thanks'. So Hi! And Thanks!\n"
                 + "Enjoy,\n"
                 + "{rep}").supplant(state)
-          });
-        }, 16 * 60 * 1000 + 32 * 1000);
-        // Calling the callback deletes the id
-        // which means that it could verify again and again
-        //cb();
+          }, next);
+        }, /*16 * 60 * 1000 +*/ 32 * 1000);
       }
   });
 
   connect.createServer()
+    .use(connect.static(path.join(__dirname, 'public-advanced')))
+    .use(connect.json())
     .use('/verimail', function (req, res, next) {
         var formData = req.body
           , id
