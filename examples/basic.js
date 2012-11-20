@@ -19,13 +19,14 @@
           }
       }
       */
-    , callback: function (cb, id, state) {
+    , callback: function (next, id, state) {
         // Now you can retrieve by the id
         console.log(state);
 
-        // Calling the callback deletes the id
-        // which means that it could verify again and again
-        //cb();
+        // NOTE: If you fail to call next then the
+        // item will be put back in the queue every time
+        // the server is restarted.
+        next();
       }
   });
 
