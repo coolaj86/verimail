@@ -1,0 +1,4 @@
+*.html
+config.js
+node_modules
+verimail.json
