@@ -9,6 +9,7 @@
     , connect = require('connect')
     , mailer = require('./config').mailer
     , verimail
+    , app
     ;
 
   verimail = Verimail.create({
@@ -52,7 +53,7 @@
       }
   });
 
-  connect.createServer()
+  app = connect.createServer()
     .use(connect.static(path.join(__dirname, 'public-advanced')))
     .use(connect.json())
     .use('/verimail', function (req, res, next) {
@@ -78,10 +79,23 @@
     // GET `/verimail` serves the Demo form
     // POST `/verimail` handles the Demo form
     .use(verimail.demoRoutes)
-
-    .listen(3000, function () {
-        console.log('Listening on http://0.0.0.0:3000');
-      })
     ;
 
+  module.exports = app;
+
+  function run() {
+    var server
+      , port = 3000
+      ;
+
+    server = app.listen(port, function () {
+      console.log(
+        'Listening on http://' + server.address().address + ':' + server.address().port
+      );
+    });
+  }
+
+  if (require.main === module) {
+    run();
+  }
 }());
