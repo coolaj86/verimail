@@ -1,0 +1,15 @@
+{
+  "name": "verimail-demo",
+  "version": "1.0.0",
+  "description": "A demo for verimail",
+  "main": "advanced.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "AJ ONeal",
+  "license": "Apache2",
+  "dependencies": {
+    "remedial": ">=1.0.7 <1.1.0"
+  }
+}

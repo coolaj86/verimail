@@ -44,7 +44,7 @@
             , to: state.email
             , subject: "You've been assimilated! W00T!"
             , body: ("Hey {name},\n"
-                + "I saw that you just joined our site and I wanted to say 'hi' and 'thanks'. So Hi! And Thanks!\n"
+                + "I saw that you just joined our site and I wanted to say 'hi' and 'thanks'.\n\nSo... \nHi!\nAnd Thanks!\n"
                 + "Enjoy,\n"
                 + "{rep}").supplant(state)
           }, next);

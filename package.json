@@ -19,5 +19,12 @@
     "e-mail",
     "verification"
   ],
-  "license": "Apache v2"
+  "license": "Apache v2",
+  "dependencies": {
+    "connect_router": ">=1.8.7 <1.9.0",
+    "nodemailer": ">=0.3.37 <0.4.0",
+    "dom-storage": ">=1.0.0 <1.1.0",
+    "json-storage": ">=1.1.2 <1.2.0",
+    "connect": ">=2.7.1 <2.8.0"
+  }
 }
