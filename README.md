@@ -90,8 +90,8 @@ Look at `examples/advanced.js` for a better picture of how it can work for you.
   * `Verimail#decipher(id, fn)` usually not needed, see details below
   * `Verimail#query(email, fn)` sends a verification message to the email
   * `Verimail#confirm(id, fn)` confirms an id without going through verimail.route
-  * `Verimail#\_db` overrides the default storage engine
-  * `Verimail#\_mailman` if you provide your own mail implementation
+  * `Verimail#_db` overrides the default storage engine
+  * `Verimail#_mailman` if you provide your own mail implementation
 
 ## prefix
 
